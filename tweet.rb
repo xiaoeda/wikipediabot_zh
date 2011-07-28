@@ -23,7 +23,6 @@ class Tweet
     title = agent.page.title.split(" - ")
     encodeTitle = URI.encode(title[0])
     url = agent.get_file("http://tinyurl.com/api-create.php?url=http://zh.wikipedia.org/wiki/" + encodeTitle)
-
     update(title[0] + " " + url)
   end
 
